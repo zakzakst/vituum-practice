@@ -16,6 +16,7 @@ export default {
     alias: {
       "@/": `${__dirname}/src/`,
       "@scss/": `${__dirname}/src/styles/`,
+      "@js/": `${__dirname}/src/scripts/`,
     },
   },
 };
