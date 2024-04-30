@@ -6,10 +6,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default {
-  plugins: [vituum(), nunjucks()],
+  plugins: [
+    vituum(),
+    nunjucks({
+      root: "./src",
+    }),
+  ],
   resolve: {
     alias: {
       "@/": `${__dirname}/src/`,
+      "@scss/": `${__dirname}/src/styles/`,
     },
   },
 };

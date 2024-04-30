@@ -1,4 +1,4 @@
-{% extends './src/layouts/default.njk' %}
+{% extends 'layouts/default.njk' %}
 {% set PAGE_DATA = {
   TITLE: 'ページタイトル',
   DESCRIPTION: 'ページ概要',
@@ -28,15 +28,15 @@
 } %}
 
 {# ▼▼▼ コンポーネント読み込み ▼▼▼ #}
-{% from './src/components/breadcrumb.njk' import default as BREADCRUMB %}
-{% from './src/components/modal.njk' import default as MODAL %}
+{% from 'components/breadcrumb.njk' import default as BREADCRUMB %}
+{% from 'components/modal.njk' import default as MODAL %}
 {# ▲▲▲ コンポーネント読み込み ▲▲▲ #}
 
-{% block PAGE_HEAD %}
+{# {% block PAGE_HEAD %}
   <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
   <link rel="stylesheet" href="/{{ SITE_ROOT }}css/sample.css">
   <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ -->
-{% endblock %}
+{% endblock %} #}
 
 {% block PAGE_CONTENT %}
   {# ▼▼▼ パンくず ▼▼▼ #}
@@ -54,8 +54,8 @@
   <!-- ▲▲▲ 固定要素（モーダルなど） ▲▲▲ -->
 {% endblock %}
 
-{% block PAGE_FOOT %}
+{# {% block PAGE_FOOT %}
   <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
   <script src="/{{ SITE_ROOT }}js/sample.js"></script>
   <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ -->
-{% endblock %}
+{% endblock %} #}
