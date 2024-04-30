@@ -1,6 +1,6 @@
 import vituum from "vituum";
-import liquid from "@vituum/vite-plugin-liquid";
+import nunjucks from "@vituum/vite-plugin-nunjucks";
 
 export default {
-  plugins: [vituum(), liquid()],
+  plugins: [vituum(), nunjucks()],
 };
