@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    {% comment %} ▼▼▼ HEAD（共通） ▼▼▼ {% endcomment %}
+    {% include 'src/components/head/_index.liquid' %}
+    {% comment %} ▲▲▲ HEAD（共通） ▲▲▲ {% endcomment %}
+
+    {% comment %} ▼▼▼ HEAD（ページ専用） ▼▼▼ {% endcomment %}
+    {% block PAGE_HEAD %}{% endblock %}
+    {% comment %} ▲▲▲ HEAD（ページ専用） ▲▲▲ {% endcomment %}
+  </head>
+
+  <body>
+    <main>
+      {% comment %} ▼▼▼ ページ内容 ▼▼▼ {% endcomment %}
+      {% block PAGE_CONTENT %}{% endblock %}
+      {% comment %} ▲▲▲ ページ内容 ▲▲▲ {% endcomment %}
+    </main>
+  </body>
+ </html>

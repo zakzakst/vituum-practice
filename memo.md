@@ -1,0 +1,3 @@
+- https://zenn.dev/ymnkx/articles/3035a58fee1399
+- https://www.shopify.com/ca/partners/shopify-cheat-sheet
+- https://coding-memo.work/development/1354/
