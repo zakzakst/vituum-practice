@@ -2,6 +2,8 @@ import vituum from "vituum";
 import nunjucks from "@vituum/vite-plugin-nunjucks";
 import path from "path";
 import { fileURLToPath } from "url";
+import autoprefixer from "autoprefixer";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -25,6 +27,11 @@ export default {
       "@/": `${__dirname}/src/`,
       "@scss/": `${__dirname}/src/styles/`,
       "@js/": `${__dirname}/src/scripts/`,
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [autoprefixer],
     },
   },
 };
