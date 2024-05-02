@@ -6,19 +6,25 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "lint": "run-s lint:*",
     "lint:html": "markuplint dist/**/*.html",
     "lint:njk": "markuplint src/**/*.njk",
     "lint:stylelint": "stylelint src/**/*.{css,scss,sass}",
+    "lint:eslint": "eslint src/**/*.{js,vue}",
     "fix": "run-s fix:*",
     "fix:stylelint": "stylelint --fix src/**/*.{css,scss,sass}",
+    "fix:eslint": "eslint --fix src/**/*.{js,vue}",
     "fix:prettier": "prettier --write './src/**/*.{js,ts,css,scss,sass,vue}'",
     "format:css": "postcss dist/assets/**/*.css --dir dist/assets --ext optimized.css"
   },
   "devDependencies": {
+    "@eslint/js": "^9.1.1",
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "@markuplint/nunjucks-parser": "^4.5.1",
     "@vituum/vite-plugin-nunjucks": "^1.1.0",
     "autoprefixer": "^10.4.19",
+    "eslint": "^9.1.1",
+    "globals": "^15.1.0",
     "markuplint": "^4.6.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.38",
@@ -38,5 +44,8 @@
     "ie >= 11",
     "iOS >= 8.1",
     "Android >= 4.4"
-  ]
+  ],
+  "resolutions": {
+    "strip-ansi": "6.0.0"
+  }
 }
