@@ -7,12 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "postcss": "postcss dist/assets/**/*.css --dir dist/assets --ext optimized.css"
+    "lint:html": "markuplint dist/**/*.html",
+    "lint:njk": "markuplint src/**/*.njk",
+    "format:css": "postcss dist/assets/**/*.css --dir dist/assets --ext optimized.css"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
+    "@markuplint/nunjucks-parser": "^4.5.1",
     "@vituum/vite-plugin-nunjucks": "^1.1.0",
     "autoprefixer": "^10.4.19",
+    "markuplint": "^4.6.1",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
     "reset-css": "^5.0.2",

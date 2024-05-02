@@ -13,7 +13,7 @@ export default {
       output: {
         entryFileNames: `assets/js/[name].js`,
         assetFileNames: (assetInfo) => {
-          // 現状CSSのみassetsとして利用されている（elseは念のため記載）
+          // 現状CSSのみassetsとして利用している（elseは念のため記載）
           const cssRegex = new RegExp(".css$", "i");
           if (cssRegex.test(assetInfo.name)) {
             return "assets/css/[name].[ext]";
