@@ -2,13 +2,13 @@
   "name": "vituum-practice",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "run-s lint:*",
     "lint:html": "markuplint dist/**/*.html",
-    "lint:njk": "markuplint src/**/*.njk",
     "lint:stylelint": "stylelint src/**/*.{css,scss,sass}",
     "lint:eslint": "eslint src/**/*.{js,vue}",
     "fix": "run-s fix:*",
@@ -16,7 +16,7 @@
     "fix:eslint": "eslint --fix src/**/*.{js,vue}",
     "fix:prettier": "prettier --write src/**/*.{js,ts,css,scss,sass,vue}",
     "format:html": "js-beautify dist/**/*.html",
-    "format:css": "postcss dist/assets/**/*.css --dir dist/assets --ext optimized.css"
+    "format:css": "postcss dist/assets/**/*.css --dir dist/assets/css --ext optimized.css"
   },
   "devDependencies": {
     "@eslint/js": "^9.1.1",
@@ -48,6 +48,7 @@
     "Android >= 4.4"
   ],
   "resolutions": {
-    "strip-ansi": "6.0.0"
+    "strip-ansi": "6.0.0",
+    "string-width": "4.2.3"
   }
 }

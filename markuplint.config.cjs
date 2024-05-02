@@ -3,4 +3,5 @@ module.exports = {
     '.njk$': '@markuplint/nunjucks-parser',
   },
   extends: ['markuplint:recommended'],
+  excludeFiles: ['**/_*.html'],
 }
