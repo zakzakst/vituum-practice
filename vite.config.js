@@ -11,8 +11,16 @@ export default {
   build: {
     rollupOptions: {
       output: {
-        entryFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`,
+        entryFileNames: `assets/js/[name].js`,
+        assetFileNames: (assetInfo) => {
+          // 現状CSSのみassetsとして利用されている（elseは念のため記載）
+          const cssRegex = new RegExp(".css$", "i");
+          if (cssRegex.test(assetInfo.name)) {
+            return "assets/css/[name].[ext]";
+          } else {
+            return "assets/js/[name].[ext]";
+          }
+        },
       },
     },
   },
@@ -25,11 +33,12 @@ export default {
   resolve: {
     alias: {
       "@/": `${__dirname}/src/`,
-      "@scss/": `${__dirname}/src/styles/`,
-      "@js/": `${__dirname}/src/scripts/`,
+      "@styles/": `${__dirname}/src/styles/`,
+      "@scripts/": `${__dirname}/src/scripts/`,
     },
   },
   css: {
+    devSourcemap: true,
     postcss: {
       plugins: [autoprefixer],
     },
