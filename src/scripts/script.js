@@ -1,5 +1,5 @@
-import headerInit from "./modules/header";
+import headerInit from './modules/header'
 
-headerInit();
+headerInit()
 
-console.log("script");
+console.log('script')
