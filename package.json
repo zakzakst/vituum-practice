@@ -15,6 +15,7 @@
     "fix:stylelint": "stylelint --fix src/**/*.{css,scss,sass}",
     "fix:eslint": "eslint --fix src/**/*.{js,vue}",
     "fix:prettier": "prettier --write src/**/*.{css,scss,sass,js,vue}",
+    "format": "run-s format:*",
     "format:html": "js-beautify dist/**/*.html",
     "format:css": "postcss dist/assets/**/*.css --dir dist/assets/css --ext optimized.css"
   },
