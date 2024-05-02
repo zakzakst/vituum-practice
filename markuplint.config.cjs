@@ -1,6 +1,6 @@
 module.exports = {
   parser: {
-    ".njk$": "@markuplint/nunjucks-parser",
+    '.njk$': '@markuplint/nunjucks-parser',
   },
-  extends: ["markuplint:recommended"],
-};
+  extends: ['markuplint:recommended'],
+}

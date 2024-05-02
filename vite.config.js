@@ -1,11 +1,11 @@
-import vituum from "vituum";
-import nunjucks from "@vituum/vite-plugin-nunjucks";
-import path from "path";
-import { fileURLToPath } from "url";
-import autoprefixer from "autoprefixer";
+import vituum from 'vituum'
+import nunjucks from '@vituum/vite-plugin-nunjucks'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import autoprefixer from 'autoprefixer'
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 export default {
   build: {
@@ -14,11 +14,11 @@ export default {
         entryFileNames: `assets/js/[name].js`,
         assetFileNames: (assetInfo) => {
           // 現状CSSのみassetsとして利用している（elseは念のため記載）
-          const cssRegex = new RegExp(".css$", "i");
+          const cssRegex = new RegExp('.css$', 'i')
           if (cssRegex.test(assetInfo.name)) {
-            return "assets/css/[name].[ext]";
+            return 'assets/css/[name].[ext]'
           } else {
-            return "assets/js/[name].[ext]";
+            return 'assets/js/[name].[ext]'
           }
         },
       },
@@ -27,14 +27,14 @@ export default {
   plugins: [
     vituum(),
     nunjucks({
-      root: "./src",
+      root: './src',
     }),
   ],
   resolve: {
     alias: {
-      "@/": `${__dirname}/src/`,
-      "@styles/": `${__dirname}/src/styles/`,
-      "@scripts/": `${__dirname}/src/scripts/`,
+      '@/': `${__dirname}/src/`,
+      '@styles/': `${__dirname}/src/styles/`,
+      '@scripts/': `${__dirname}/src/scripts/`,
     },
   },
   css: {
@@ -43,4 +43,4 @@ export default {
       plugins: [autoprefixer],
     },
   },
-};
+}
