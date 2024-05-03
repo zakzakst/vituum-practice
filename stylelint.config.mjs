@@ -6,11 +6,9 @@ export default {
   ],
   rules: {
     'color-hex-length': 'short',
-    'no-duplicate-selectors': null,
     'no-empty-source': null,
-    'no-descending-specificity': null,
-    'scss/operator-no-unspaced': null,
+    'scss/at-import-partial-extension': null,
     'scss/load-no-partial-leading-underscore': null,
   },
-  ignoreFiles: ['src/sass/**/_*scss', 'src/sass/global/mixins.scss'],
+  ignoreFiles: ['src/styles/**/_*scss', 'src/styles/global/mixins.scss'],
 }

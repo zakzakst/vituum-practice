@@ -1,5 +1,5 @@
-import headerInit from './modules/header'
+import { header } from '@/scripts/modules/+'
 
-headerInit()
+header()
 
 console.log('script')

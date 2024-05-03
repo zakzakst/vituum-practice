@@ -1,4 +1,4 @@
-@use '../global' as g;
+@use '../global/variables' as v;
 @forward '../../../node_modules/reset-css/sass/_reset';
 
 *,
@@ -8,9 +8,9 @@
 }
 
 body {
-  font-family: g.$ff_default;
-  font-size: g.$fz_default;
-  font-weight: g.$fw_default;
-  line-height: g.$lh_default;
-  color: g.$c_text;
+  font-family: v.$ff_default;
+  font-size: v.$fz_default;
+  font-weight: v.$fw_default;
+  line-height: v.$lh_default;
+  color: v.$c_text;
 }

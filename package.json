@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "run-s build:*",
+    "build:vite": "vite build",
+    "build:format-html": "js-beautify dist/**/*.html",
+    "build:format-css": "postcss dist/assets/**/*.css --dir dist/assets/css --ext css",
     "preview": "vite preview",
     "lint": "run-s lint:*",
     "lint:html": "markuplint dist/**/*.html && html-validate dist/**/*.html",
@@ -14,10 +17,7 @@
     "fix": "run-s fix:*",
     "fix:stylelint": "stylelint --fix src/**/*.{css,scss,sass}",
     "fix:eslint": "eslint --fix src/**/*.{js,vue}",
-    "fix:prettier": "prettier --write src/**/*.{css,scss,sass,js,vue}",
-    "format": "run-s format:*",
-    "format:html": "js-beautify dist/**/*.html",
-    "format:css": "postcss dist/assets/**/*.css --dir dist/assets/css --ext optimized.css"
+    "fix:prettier": "prettier --write src/**/*.{css,scss,sass,js,vue}"
   },
   "devDependencies": {
     "@eslint/js": "^9.1.1",

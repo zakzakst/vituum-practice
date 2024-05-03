@@ -12,20 +12,30 @@ export default {
     rollupOptions: {
       output: {
         entryFileNames: `assets/js/[name].js`,
-        assetFileNames: (assetInfo) => {
-          // 現状CSSのみassetsとして利用している（elseは念のため記載）
-          const cssRegex = new RegExp('.css$', 'i')
-          if (cssRegex.test(assetInfo.name)) {
-            return 'assets/css/[name].[ext]'
-          } else {
-            return 'assets/js/[name].[ext]'
-          }
-        },
+        chunkFileNames: 'assets/js/[name].js',
+        assetFileNames: 'assets/css/[name].[ext]',
+        // assetFileNames: (assetInfo) => {
+        //   // 現状CSSのみassetsとして利用している（elseは念のため記載）
+        //   const cssRegex = new RegExp('.css$', 'i')
+        //   if (cssRegex.test(assetInfo.name)) {
+        //     return 'assets/css/[name].[ext]'
+        //   } else {
+        //     return 'assets/js/[name].[ext]'
+        //   }
+        // },
       },
     },
   },
   plugins: [
-    vituum(),
+    vituum({
+      imports: {
+        filenamePattern: {
+          '+.css': [],
+          '+.scss': 'src/styles',
+          '+.js': 'src/scripts',
+        },
+      },
+    }),
     nunjucks({
       root: './src',
     }),
