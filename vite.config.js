@@ -1,5 +1,6 @@
 import vituum from 'vituum'
 import nunjucks from '@vituum/vite-plugin-nunjucks'
+import vue from '@vitejs/plugin-vue'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import autoprefixer from 'autoprefixer'
@@ -39,6 +40,7 @@ export default {
     nunjucks({
       root: './src',
     }),
+    vue(),
   ],
   resolve: {
     alias: {
