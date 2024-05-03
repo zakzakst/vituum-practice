@@ -29,6 +29,7 @@
     "cheerio": "^1.0.0-rc.12",
     "clean-css": "^5.3.3",
     "eslint": "^9.1.1",
+    "eslint-plugin-vue": "^9.25.0",
     "globals": "^15.1.0",
     "html-validate": "^8.18.2",
     "js-beautify": "^1.15.1",

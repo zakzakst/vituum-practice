@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 // import Sample from './sample'
-import Sample from './Sample.vue'
+import SampleComponent from './SampleComponent.vue'
 
 const vueSampleInit = () => {
-  const app = createApp(Sample)
+  const app = createApp(SampleComponent)
   // const app = createApp({
   //   data() {
   //     return {
